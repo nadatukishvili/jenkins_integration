@@ -11,7 +11,7 @@ pipeline {
 
         stage('compiling maven') {
           steps {
-            sh 'compiler:compile'
+            powershell(script: 'mvn compile', returnStatus: true)
           }
         }
 
